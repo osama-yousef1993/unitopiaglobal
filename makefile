@@ -17,3 +17,6 @@ install:
 	@echo "Installing..."
 	pip install -r requirements.txt
 	@echo "Done"
+
+run:
+	python3 -m main

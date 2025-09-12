@@ -1,85 +1,125 @@
-{% include 'header.html' %}
-<section class="page-heading custom-bg-destinations">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <div class="header-text text-center">
-          <h1>Explore Our Study Destinations</h1>
-          <h4 style="margin-top:24px;">
-            From the US to Europe, discover the world’s top universities and opportunities.
-          </h4>
-          <div class="destinations-visual" style="margin-top:32px;">
-            <img src="../static/assets/images/main_images/UNITOPIA Images/destination.png" alt="World Map and Landmarks" class="hero-map-img">
-            <!-- Example: collage image with Big Ben, Statue of Liberty, CN Tower, Spanish architecture, Bosphorus, etc. -->
-          </div>
-        </div>
-      </div>
+{% include 'header.html'%}
+<!-- Hero Start -->
+<div class="container-fluid bg-light py-6 my-6 mt-0">
+    <div class="container text-center animated bounceInDown">
+        <h1 class="display-1 mb-4">Destinations</h1>
+        <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item text-dark" aria-current="page">Destination</li>
+        </ol>
     </div>
-  </div>
-</section>
+</div>
+<!-- Hero End -->
 
-<!-- Featured Countries Section -->
-<section class="featured-countries">
-  <div class="container">
-    <div class="section-heading text-center">
-      <h3>Featured Study Destinations</h3>
-      <p>Click a country to explore top universities, programs, and application details.</p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="/destinations/usa" class="country-card">
-          <span class="country-emoji">🇺🇸</span>
-          <span class="country-name">United States</span>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="/destinations/canada" class="country-card">
-          <span class="country-emoji">🇨🇦</span>
-          <span class="country-name">Canada</span>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="/destinations/uk" class="country-card">
-          <span class="country-emoji">🇬🇧</span>
-          <span class="country-name">United Kingdom</span>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="/destinations/spain" class="country-card">
-          <span class="country-emoji">🇪🇸</span>
-          <span class="country-name">Spain</span>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="/destinations/europe" class="country-card">
-          <span class="country-emoji">🇪🇺</span>
-          <span class="country-name">Europe (Other)</span>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="/destinations/turkey" class="country-card">
-          <span class="country-emoji">🇹🇷</span>
-          <span class="country-name">Turkey</span>
-        </a>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top:32px;">
-      <a href="https://www.topuniversities.com/world-university-rankings" target="_blank" class="qs-link">
-        See the latest QS World University Rankings →
-      </a>
-    </div>
-  </div>
-</section>
+<style>
+.destinations-map-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.destinations-map-img {
+    width: 100%;
+    min-height: 600px;
+    border-radius: 12px;
+    background: #0e1d30;
+    object-fit: cover;
+}
+.map-pin {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.map-pin-icon {
+    width: 48px;
+    height: 48px;
+    background: #a29169;
+    border: 4px solid #0e1d30;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0e1d30;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 12px #a29169;
+    position: relative;
+}
+.map-pin-tail {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 20px solid #a29169;
+    margin-top: -4px;
+}
+.map-pin-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0e1d30;
+    color: #a29169;
+    padding: 8px 18px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(14,29,48,0.15);
+}
+.map-pin:hover .map-pin-tooltip {
+    display: block;
+}
+</style>
 
-<!-- Final CTA Banner -->
-<section class="final-cta-banner">
-  <div class="container text-center">
-    <h3>Where will your journey take you?</h3>
-    <p>Explore universities worldwide with Unitopia Global. Apply today and secure your future.</p>
-    <div class="main-button-gradient">
-      <a href="/contact">Book Free Consultation</a>
+<!-- Destinations Map Start -->
+<div class="container py-5">
+    <div class="destinations-map-wrapper">
+        <img class="destinations-map-img" src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World Map">
+        <!-- Pins with improved positions and size -->
+        <!-- United States -->
+        <a href="/" class="map-pin" style="left: 17.5%; top: 25%;">
+            <div class="map-pin-icon">US</div>
+            <div class="map-pin-tail"></div>
+            <div class="map-pin-tooltip">United States</div>
+        </a>
+        <!-- Canada -->
+        <a href="/" class="map-pin" style="left: 16.5%; top: 10%;">
+            <div class="map-pin-icon">CA</div>
+            <div class="map-pin-tail"></div>
+            <div class="map-pin-tooltip">Canada</div>
+        </a>
+        <!-- United Kingdom -->
+        <a href="/" class="map-pin" style="left: 44.5%; top: 18%;">
+            <div class="map-pin-icon">UK</div>
+            <div class="map-pin-tail"></div>
+            <div class="map-pin-tooltip">United Kingdom</div>
+        </a>
+        <!-- Australia -->
+        <a href="/" class="map-pin" style="left: 84%; top: 60%;">
+            <div class="map-pin-icon">AU</div>
+            <div class="map-pin-tail"></div>
+            <div class="map-pin-tooltip">Australia</div>
+        </a>
+        <!-- Germany -->
+        <a href="/" class="map-pin" style="left: 48.5%; top: 20%;">
+            <div class="map-pin-icon">DE</div>
+            <div class="map-pin-tail"></div>
+            <div class="map-pin-tooltip">Germany</div>
+        </a>
+        <!-- France -->
+        <a href="/" class="map-pin" style="left: 46%; top: 23%;">
+            <div class="map-pin-icon">FR</div>
+            <div class="map-pin-tail"></div>
+            <div class="map-pin-tooltip">France</div>
+        </a>
     </div>
-  </div>
-</section>
+</div>
+<!-- Destinations Map End -->
 
 {% include 'footer.html' %}

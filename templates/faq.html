@@ -1,0 +1,76 @@
+{% include 'header.html'%}
+        <!-- Hero Start -->
+        <div class="container-fluid bg-light py-6 my-6 mt-0">
+            <div class="container text-center animated bounceInDown">
+                <h1 class="display-1 mb-4">FAQs</h1>
+                <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item text-dark" aria-current="page">FAQs</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+        <!-- Contact End -->
+         <!-- FAQ Start -->
+<div class="container-fluid py-6">
+    <div class="container">
+        <div class="text-center mb-5">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">FAQ</small>
+            <h1 class="display-5 mb-4">Frequently Asked Questions</h1>
+        </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item mb-3 border border-primary rounded">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                        How do I start my study abroad application?
+                    </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-light">
+                        Simply reach out through our contact form or book a free consultation. Our advisors will guide you step-by-step.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item mb-3 border border-primary rounded">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                        What documents do I need for my application?
+                    </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-light">
+                        You’ll need transcripts, personal statements, recommendation letters, and other supporting documents. We’ll help you prepare each one.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item mb-3 border border-primary rounded">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                        Can you help with visa applications?
+                    </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-light">
+                        Yes! Our team provides full support for visa applications, interview preparation, and travel arrangements.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item mb-3 border border-primary rounded">
+                <h2 class="accordion-header" id="faqHeadingFour">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                        How do I find scholarships?
+                    </button>
+                </h2>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-light">
+                        We help you search for scholarships and funding opportunities, and assist with applications and essays.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ End -->
+
+{% include 'footer.html'%}

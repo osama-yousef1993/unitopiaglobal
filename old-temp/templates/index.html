@@ -1,0 +1,236 @@
+{% include 'header.html'%}
+
+  <!-- ***** Main Banner Area Start ***** -->
+<section class="main-banner" id="top">
+  <div class="banner-bg-wrapper" style="position:relative;overflow:hidden;">
+    <!-- Animated SVG Wave Background -->
+    <svg class="banner-wave" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#927e4e" />
+          <stop offset="100%" stop-color="#927e4e" />
+        </linearGradient>
+      </defs>
+      <path id="wavePath" fill="url(#waveGradient)" fill-opacity="0.7">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite"
+          values="M0,160 C480,320 960,0 1440,160 L1440,320 L0,320 Z;
+                  M0,120 C480,240 960,80 1440,120 L1440,320 L0,320 Z;
+                  M0,160 C480,320 960,0 1440,160 L1440,320 L0,320 Z"/>
+        M0,160 C480,320 960,0 1440,160 L1440,320 L0,320 Z
+      </path>
+    </svg>
+    <!-- Gradient Overlay -->
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(146, 126, 78, 0.7) 0%,rgba(14, 29, 48, 0.5) 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="row align-items-center" style="min-height:400px;">
+        <div class="col-lg-6 align-self-center">
+          <div class="header-text">
+            <h6 style="color:#fff;letter-spacing:2px;font-weight:600;">Welcome to UNITOPIA GLOBAL.</h6>
+            <h2 id="typewriter" style="color:#fff;font-size:2.5rem;font-weight:700;"></h2>
+            <script>
+            const texts = ["Your Path. Our Mission.", "Achieve Your Dreams.", "Join Us Today!"];
+            let count = 0, index = 0, currentText = '', letter = '';
+            (function type() {
+              if (count === texts.length) count = 0;
+              currentText = texts[count];
+              letter = currentText.slice(0, ++index);
+              document.getElementById('typewriter').textContent = letter;
+              if (letter.length === currentText.length) {
+                setTimeout(() => {
+                  index = 0; count++;
+                  setTimeout(type, 1000);
+                }, 1500);
+              } else {
+                setTimeout(type, 100);
+              }
+            })();
+            </script>
+            <div class="main-button-gradient mt-4">
+              <div class="scroll-to-section"><a href="/contact" style="font-size:1.2rem;padding:12px 32px;border-radius:30px;background:linear-gradient(90deg,#3b5998,#4e54c8);color:#fff;font-weight:600;box-shadow:0 4px 16px rgba(78,84,200,0.15);border:none;">Join Us Now!</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center">
+          <div class="right-image position-relative" style="max-width:400px;">
+            <img src="../static/assets/images/main_images/UNITOPIA Images/first-main-img.png" alt="" style="width:100%;border-radius:24px;box-shadow:0 8px 32px rgba(59,89,152,0.18);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="simple-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1">
+          <div class="left-image">
+            <img src="../static/assets/images/cta-left-image.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h6>Helping Students From Application to Arrival</h6>
+          <h4> From applications to airport arrivals... Trust, clarity, and care are at the heart of every step we take together.</h4>
+          <div class="white-button">
+            <a href="/contact">Start Your Journey</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="services-steps" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <h6>Our Services</h6>
+      <h4>Core Services <em>(Four-Step System)</em></h4>
+    </div>
+    <div class="steps-wrapper">
+      <div class="step-item">
+        <div class="step-icon">
+          <img src="../static/assets/images/service-icon-01.png" alt="">
+        </div>
+        <h4><span class="step-number">1</span> Academic Pathway Guidance</h4>
+        <p>We help students choose the right school subjects, majors, and universities based on academic background, personal interests, budget, and future career goals. Each plan is tailored, ensuring every student follows a pathway that leads to long-term success.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">
+          <img src="../static/assets/images/service-icon-02.png" alt="">
+        </div>
+        <h4><span class="step-number">2</span> Application & Document Assistance</h4>
+        <p>From drafting and refining personal statements to preparing supporting documents, our team handles every part of the application process. We ensure each submission is accurate, compelling, and on time, giving students the best chance at acceptance.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">
+          <img src="../static/assets/images/service-icon-03.png" alt="">
+        </div>
+        <h4><span class="step-number">3</span> Visa & Pre-Departure Support</h4>
+        <p>We guide students through visa applications, interview preparation, and required documentation. Beyond the visa, we provide orientation on travel, accommodation, and settling in abroad—helping families feel confident about every step.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">
+          <img src="../static/assets/images/service-icon-04.png" alt="">
+        </div>
+        <h4><span class="step-number">4</span> Scholarship & Financing Assistance</h4>
+        <p>We connect students with available scholarships, grants, and funding opportunities that match their profile. Our support includes guidance on scholarship essays, financial planning, and cost-of-living preparation, so studying abroad is both achievable and sustainable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Our Destinations</h6>
+            <h4>Where You <em>Can Go</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item" style="background: url('../static/assets/images/main_images/UNITOPIA Images/usa.png');">
+              <div class="item-overlay"></div>
+              <h4>United States of America</h4>
+              <span>          
+                <div class="white-button">
+                  <a href="/contact">Apply Now</a>
+                </div>
+              </span>
+              <img src="../static/assets/images/main_images/UNITOPIA Images/us-flag.png" alt="">
+            </div>
+            <div class="item" style="background: url('../static/assets/images/main_images/UNITOPIA Images/canada.png');">
+                <div class="item-overlay"></div>
+                <h4>Canada</h4>
+                <span>          
+                  <div class="white-button">
+                    <a href="/contact">Apply Now</a>
+                  </div>
+                </span>
+                <img src="../static/assets/images/main_images/UNITOPIA Images/loo.png" alt="">
+            </div>
+            <div class="item" style="background: url('../static/assets/images/main_images/UNITOPIA Images/spain.png');">
+                <div class="item-overlay"></div>
+                <h4>Spain</h4>
+                <span>          
+                  <div class="white-button">
+                    <a href="/contact">Apply Now</a>
+                  </div>
+                </span>
+                <img src="../static/assets/images/main_images/UNITOPIA Images/spain-flag.png" alt="">
+            </div>
+            <div class="item" style="background: url('../static/assets/images/main_images/UNITOPIA Images/london.png');">
+                <div class="item-overlay"></div>
+                <p>England, Scotland, Wales, and Northern Ireland</p>
+                <h4>United Kingdom</h4>
+                <span>          
+                  <div class="white-button">
+                    <a href="/contact">Apply Now</a>
+                  </div>
+                </span>
+                <img src="../static/assets/images/main_images/UNITOPIA Images/uk-flag.png" alt="">
+            </div>
+            <div class="item" style="background: url('../static/assets/images/main_images/UNITOPIA Images/usa.png');">
+                <div class="item-overlay"></div>
+                <h4>Europe</h4>
+                <span>          
+                  <div class="white-button">
+                    <a href="/contact">Apply Now</a>
+                  </div>
+                </span>
+                <img src="../static/assets/images/main_images/UNITOPIA Images/european.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="simple-banner">
+  <div class="container">
+    <div class="banner-flex">
+      <div class="banner-text left">
+        <h4>Need expert support for university applications and visas?</h4>
+      </div>
+      <div class="banner-separator">
+        <hr />
+      </div>
+      <div class="banner-text right">
+        <h4>Ready to embark on your journey abroad?</h4>
+      </div>
+    </div>
+    <div class="white-button">
+      <a href="/contact">Book a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section class="simple-community">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="left-info">
+            <div class="section-heading">
+              <h4>JOIN OUR <em>COMMUNITY!</em></h4>
+            </div>
+            <div class="main-button-gradient">
+              <a href="https://discord.gg/AUA9mehY">Discover UNITOPIA's community</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div id="video">
+            <div class="thumb">
+              <img src="../static/assets/images/main_images/UNITOPIA Images/back23-1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  
+
+
+
+{%include 'footer.html'%}

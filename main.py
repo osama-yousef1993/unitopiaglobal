@@ -11,9 +11,14 @@ def home():
     return render_template("index.html", title="Home - ")
 
 
-@app.route("/about_us")
+@app.route("/index")
+def index():
+    return render_template("new-temp/templates/index.html")
+
+
+@app.route("/about")
 def about_us():
-    return render_template("about-us.html", title="About US - ")
+    return render_template("about.html", title="About US - ")
 
 
 @app.route("/destinations")
@@ -51,18 +56,33 @@ def destinations_canada():
     return render_template("countries/canada.html", title="Canada - ")
 
 
-@app.route("/services")
+@app.route("/service")
 def services():
-    return render_template("our-services.html", title="Services - ")
+    return render_template("service.html", title="Services - ")
 
 
 @app.route("/contact")
 def contact():
-    return render_template("contact-us.html", title="Contact - ")
+    return render_template("contact.html", title="Contact - ")
+
+
+@app.route("/faq")
+def faq():
+    return render_template("faq.html", title="FAQs - ")
+
+
+@app.route("/testimonial")
+def testimonial():
+    return render_template("testimonial.html", title="Testimonial - ")
+
+
+@app.route("/404")
+def empty_page():
+    return render_template("404.html", title="FAQs - ")
 
 
 #  Destinations | Services | Contact
 
 if __name__ == "__main__":
-    # app.run(host="127.0.0.1", port=3000, debug=True)
-    app.run(debug=True)
+    app.run(host="127.0.0.1", port=3000, debug=True)
+    # app.run(debug=True)
