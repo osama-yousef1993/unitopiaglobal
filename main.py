@@ -76,9 +76,64 @@ def testimonial():
     return render_template("testimonial.html", title="Testimonial - ")
 
 
-@app.route("/404")
-def empty_page():
-    return render_template("404.html", title="FAQs - ")
+@app.route("/training")
+def training():
+    return render_template("404.html", title="Training - ")
+
+
+@app.route("/us")
+def us():
+    return render_template("sub/us.html", title="United States - ")
+
+
+@app.route("/canada")
+def canada():
+    return render_template("sub/canada.html", title="Canada - ")
+
+
+@app.route("/uk")
+def uk():
+    return render_template("sub/uk.html", title="United Kingdom - ")
+
+
+@app.route("/spain")
+def spain():
+    return render_template("sub/spain.html", title="Spain - ")
+
+
+@app.route("/turkey")
+def turkey():
+    return render_template("sub/turkey.html", title="Turkey - ")
+
+
+@app.route("/europe")
+def europe():
+    return render_template("sub/europe.html", title="Europe - ")
+
+
+@app.route("/france")
+def france():
+    return render_template("sub/france.html", title="France - ")
+
+
+@app.route("/germany")
+def germany():
+    return render_template("sub/germany.html", title="Germany - ")
+
+
+@app.route("/australia")
+def australia():
+    return render_template("sub/australia.html", title="Australia - ")
+
+
+@app.route("/ksa")
+def ksa():
+    return render_template("sub/ksa.html", title="KSA - ")
+
+
+@app.route("/netherlands")
+def netherlands():
+    return render_template("sub/netherlands.html", title="Netherlands - ")
 
 
 #  Destinations | Services | Contact

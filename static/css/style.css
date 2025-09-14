@@ -1,4 +1,14 @@
 
+/* 1. Import EB Garamond from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+/* Override font-family for Bootstrap elements */
+body,
+h1, h2, h3, h4, h5, h6,
+.navbar, .btn, .card, .modal, .tooltip, .popover {
+  font-family: 'EB Garamond', serif !important;
+}
+
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
