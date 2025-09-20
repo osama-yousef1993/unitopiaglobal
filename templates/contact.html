@@ -21,28 +21,29 @@
                     <div class="row g-4">
                         <div class="col-12">
                             <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Get in touch</small>
-                            <h1 class="display-5 mb-0">Let’s Start Your Journey Today</h1>
+                            <h1 class="display-5 mb-0">Let's Start Your Journey Today</h1>
                         </div>
                         <div class="col-md-6 col-lg-7">
-                            <p class="mb-4">Reach out to our team with any questions. We’re here to help.</p>
+                            <p class="mb-4">Reach out to our team with any questions. We're here to help.</p>
                             <p class="mb-4 text-dark">Note: Any Data Entered here is confidential and only will use for Contacting The Client.</p>
-                            <form>
-                                <input type="text" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name">
-                                <input type="email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Email">
-                                <input type="text" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Phone">
-                                <select class="w-100 form-control p-3 mb-4 border-primary bg-light" aria-label="Default select example">
-                                    <option selected>Select Country</option>
+                            <form action="mailto:admin@unitopiaglobal.com" method="post" enctype="text/plain">
+                                <input type="text" name="name" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name" required>
+                                <input type="email" name="email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Email" required>
+                                <input type="text" name="phone" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Phone" required>
+                                <input type="text" name="field_of_study" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Field of Study">
+                                <select name="country" class="w-100 form-control p-3 mb-4 border-primary bg-light" aria-label="Default select example">
+                                    <option value="" selected>Select Country</option>
                                     <option value="USA">USA</option>
                                     <option value="UK">UK</option>
                                     <option value="India">India</option>
                                 </select>
-                                <select class="w-100 form-control p-3 mb-4 border-primary bg-light" aria-label="Default select example">
-                                    <option selected>Select Degree</option>
+                                <select name="degree" class="w-100 form-control p-3 mb-4 border-primary bg-light" aria-label="Default select example">
+                                    <option value="" selected>Select Degree</option>
                                     <option value="Bachelor">Bachelor</option>
-                                    <option value="Master’s">Master’s</option>
+                                    <option value="Master's">Master's</option>
                                     <option value="English courses">English courses</option>
                                 </select>
-                                <textarea class="w-100 form-control mb-4 p-3 border-primary bg-light" rows="4" cols="10" placeholder="Your Message"></textarea>
+                                <textarea name="message" class="w-100 form-control mb-4 p-3 border-primary bg-light" rows="4" cols="10" placeholder="Your Message"></textarea>
                                 <button class="w-100 btn btn-primary form-control p-3 border-primary bg-primary rounded-pill" type="submit">Reach Out</button>
                             </form>
                         </div>
@@ -61,8 +62,7 @@
                                     <i class="fas fa-envelope fa-2x text-primary me-4"></i>
                                     <div class="">
                                         <h4>Mail Us</h4>
-                                        <p class="mb-2">info@example.com</p>
-                                        <p class="mb-0">support@example.com</p>
+                                        <p class="mb-2">admin@unitopiaglobal.com</p>
                                     </div>
                                 </div>
                                 <div class="d-inline-flex w-100 border border-primary p-4 rounded">

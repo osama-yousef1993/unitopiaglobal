@@ -1,0 +1,50 @@
+/* Custom styles */
+
+/* Make images bigger in the custom container */
+.container.pb-5.custom .img-fluid {
+    max-width: 170%; /* Increase the maximum width beyond 100% */
+    transform: scale(1.3); /* Scale the image up by 30% */
+    margin: 0 auto; /* Center the image if needed */
+}
+
+/* Add some margin on smaller screens to prevent overflow */
+@media (max-width: 992px) {
+    .container.pb-5.custom .img-fluid {
+        max-width: 190%; /* Reset to 100% on smaller screens */
+        transform: scale(1); /* No scaling on smaller screens */
+    }
+}
+
+/* Coaching cards styling */
+.coaching-card {
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.coaching-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--primary);
+}
+
+.coaching-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.coaching-content {
+    background-color: #fff;
+}
+
+.coaching-card:hover .coaching-content h4 {
+    color: var(--primary) !important;
+}
+
+/* Ensure text doesn't disappear on hover */
+.coaching-card .coaching-content p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}

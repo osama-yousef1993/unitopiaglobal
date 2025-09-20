@@ -78,7 +78,7 @@ def testimonial():
 
 @app.route("/training")
 def training():
-    return render_template("404.html", title="Training - ")
+    return render_template("training.html", title="Training - ")
 
 
 @app.route("/us")
